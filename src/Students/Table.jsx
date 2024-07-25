@@ -28,14 +28,14 @@ function Table(props) {
           <th>Name</th>
           <th>Father's Name</th>
           <th>Mother's Name</th>
-          <th>Date of Birth</th>
+          {/* <th>Date of Birth</th>
           <th>Aadhar Number</th>
           <th>Blood Group</th>
           <th>Address</th>
-          <th>Active</th>
+          <th>Active</th> */}
           <th>Class</th>
           <th>Section</th>
-          <th>Transport</th>
+          {/* <th>Transport</th> */}
           <th>Mobile</th>
           <th>ID</th>
           <th>Action</th>
@@ -54,14 +54,14 @@ function Table(props) {
             <td>{student.name}</td>
               <td>{student.father_name}</td>
               <td>{student.mother_name}</td>
-              <td>{student.dob}</td>
+              {/* <td>{student.dob}</td>
               <td>{student.adhar_no}</td>
               <td>{student.blood_group}</td>
               <td>{student.address}</td>
-              <td>{student.isActive}</td>
+              <td>{student.isActive}</td> */}
               <td>{student.class}</td>
               <td>{student.section}</td>
-              <td>{student.transport}</td>
+              {/* <td>{student.transport}</td> */}
               <td>{student.Mobile}</td>
               <td>{student.Id}</td>
             <button type="button" onClick={() => props.deleteRecord(index)}>
