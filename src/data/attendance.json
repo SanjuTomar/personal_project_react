@@ -1,0 +1,9 @@
+{
+    "id":"1",
+    "student_id":"stu_a121",
+    "date":"07-30-2024",
+    "in_time":"timestamp",
+    "out_time":"timestamp",
+    "is_presnt":"yes",
+    "day":"tuesday"
+}
