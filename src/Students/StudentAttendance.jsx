@@ -86,8 +86,7 @@ const DateText = styled.p`
 `;
 
 const Dropdown = styled.select`
-  margin-top: 10px;
-  padding: 8px;
+  padding: 0.5rem;
   font-size: 1rem;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -157,6 +156,12 @@ const Preview = styled.div`
 const PreviewTable = styled.table`
   margin-bottom: 20px;
 `;
+const ActionWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap:2rem;
+  margin-bottom: 0.8rem;
+`;
 
 const StudentAttendance = () => {
   // State to hold student records
@@ -168,7 +173,7 @@ const StudentAttendance = () => {
   const handleClassChange = (event) => {
     const selectedClass = event.target.value;
     setSelectedClass(selectedClass);
-    setStudents(classData[selectedClass]);
+    setStudents(classData[selectedClass] || classData['IV-B']);
   };
 
   // Toggle the status of a student
@@ -204,12 +209,22 @@ const StudentAttendance = () => {
     <Container>
       <Header>
         <Title>Student Attendance</Title>
-        <DateText>{formatDate(today)}</DateText>
-        <Dropdown value={selectedClass} onChange={handleClassChange}>
+        
+      </Header>
+      <ActionWrapper>
+      <DateText>{formatDate(today)}</DateText>
+      <Dropdown value={selectedClass} onChange={handleClassChange}>
           <option value="IV-B">IV-B</option>
           <option value="V-A">V-A</option>
+          <option value="V-B">V-B</option>
+          <option value="VI-A">VI-A</option>
+          <option value="VI-B">VI-B</option>
+          <option value="VII-A">VII-A</option>
+          <option value="VII-B">VII-B</option>
+          <option value="VIII-A">VIII-A</option>
+          <option value="VIII-B">VIII-B</option>
         </Dropdown>
-      </Header>
+      </ActionWrapper>
       <Table>
         <thead>
           <tr>
